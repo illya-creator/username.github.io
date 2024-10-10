@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British Shorthair Cats</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <h1>British Shorthair Cats</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#history">History</a>
+            <a href="#care">Care</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Секция О породе -->
+    <section id="about">
+        <h2>About British Shorthair Cats</h2>
+        <p class="info-text">
+            The British Shorthair is one of the most popular cat breeds in the world, known for its distinctive face, round cheeks, and plush coat. This breed is renowned for its calm and easygoing personality, making them ideal pets for families.
+        </p>
+        <img src="https://cdn2.thecatapi.com/images/MTY3MTE5MQ.jpg" alt="British Shorthair Cat" onclick="openModal('modal1')">
+    </section>
+
+    <!-- Секция История породы -->
+    <section id="history">
+        <h2>History of the Breed</h2>
+        <p class="info-text">
+            The British Shorthair's origins date back to Roman times, when the Romans brought cats to Britain to help control pests. Over time, these cats adapted to the British climate, evolving into the robust breed we know today.
+        </p>
+        <img src="https://cdn2.thecatapi.com/images/MTY3MTE4MQ.jpg" alt="History of British Shorthair" onclick="openModal('modal2')">
+    </section>
+
+    <!-- Секция Уход за британскими котами -->
+    <section id="care">
+        <h2>Care Tips</h2>
+        <p class="info-text">
+            British Shorthairs are relatively low-maintenance cats, but their thick coats do require regular grooming. They are also prone to gaining weight, so it’s important to provide a healthy diet and regular exercise.
+        </p>
+        <img src="https://cdn2.thecatapi.com/images/MTY3MTE3MQ.jpg" alt="British Shorthair Care" onclick="openModal('modal3')">
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p class="info-text">
+            Check out these beautiful pictures of British Shorthair cats!
+        </p>
+        <img src="https://cdn2.thecatapi.com/images/MTY3MTE4NQ.jpg" alt="Gallery Image 1" onclick="openModal('modal4')">
+        <img src="https://cdn2.thecatapi.com/images/MTY3MTE3MQ.jpg" alt="Gallery Image 2" onclick="openModal('modal5')">
+        <img src="https://cdn2.thecatapi.com/images/MTY3MTE2Ng.jpg" alt="Gallery Image 3" onclick="openModal('modal6')">
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>Copyright &copy; 2024 British Shorthair Cats. All rights reserved.</p>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div id="modal1" class="modal" onclick="closeModal('modal1')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>British Shorthair</h2>
+            <p>This breed is known for its calm temperament and strong, muscular body. They make great companions!</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal" onclick="closeModal('modal2')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>History</h2>
+            <p>The British Shorthair has a long history, originating from cats brought to Britain by the Romans.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal" onclick="closeModal('modal3')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Care Tips</h2>
+            <p>Regular grooming is essential to keep their coats healthy and free from mats.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal" onclick="closeModal('modal4')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Gallery Image 1</h2>
+            <p>A beautiful British Shorthair cat resting peacefully.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal" onclick="closeModal('modal5')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Gallery Image 2</h2>
+            <p>This British Shorthair is enjoying the sunshine.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal" onclick="closeModal('modal6')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h2>Gallery Image 3</h2>
+            <p>A playful British Shorthair kitten.</p>
+        </div>
+    </div>
+
+    <script>
+        // Открытие модального окна
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Закрытие модального окна
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Закрытие модального окна при нажатии вне него
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+
+</body>
+</html>
